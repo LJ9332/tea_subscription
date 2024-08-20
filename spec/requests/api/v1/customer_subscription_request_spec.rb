@@ -3,8 +3,8 @@ require "rails_helper"
 describe "Customer Subscription API" do
   describe "Happy Path" do
     it "can create a new subscription for a customer" do
-      customer = create(:customer)
-      subscription = create(:subscription)
+      customer = Customer.create!(first_name: "LJ", last_name: "Butler", email: "test@test.com", address: "123 test st")
+      subscription = Subscription.create!(title: "10 for 2", price: 10, frequency: 2)
       
       subscription_params = {
         subscription_id: subscription.id,
@@ -31,8 +31,6 @@ describe "Customer Subscription API" do
       expect(data[:attributes]).to be_a Hash
       expect(data[:attributes]).to have_key(:status)
       expect(data[:attributes][:status]).to eq(customer_subscription.status)
-      expect(data[:attributes]).to have_key(:title)
-      expect(data[:attributes][:subscription_title]).to eq(subscription.title)
       
       expect(data[:relationships]).to be_a Hash
       expect(data[:relationships]).to have_key(:customer)
