@@ -161,5 +161,3 @@ describe "Customer Subscription API" do
     end
   end
 end
-
-
