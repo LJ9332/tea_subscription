@@ -20,7 +20,7 @@ This app was a solo a built as part of the Back End [Take Home Challenge](https:
 <details>
   <summary>Setup</summary>
   1. Fork and/or Clone this Repo from GitHub.
-  2. In your terminal use `$ git clone <ssh or https path>`.
+  2. In your terminal use `$ git clone git@github.com:LJ9332/tea_subscription.git`.
   3. Change into the cloned directory using `$ cd example`.
   4. Install the gem packages using `$ bundle install`.
   5. Database Migrations can be set up by running: 
